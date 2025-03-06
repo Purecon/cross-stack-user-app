@@ -27,10 +27,14 @@ export class cdkStack extends cdk.Stack {
           category: "api",
           resourceName: "crossstackuserapp", 
         },
-        // {
-        //   category: "function",
-        //   resourceName: "testFunction", 
-        // }
+        {
+          category: "function",
+          resourceName: "testFunction", 
+        },
+        {
+          category: "function",
+          resourceName: "crossstackuserapptestLayer", 
+        },
       ]
     );
     
@@ -52,9 +56,14 @@ export class cdkStack extends cdk.Stack {
     ]);
 
     //Lambda Arn
-    // const lambdaArn = cdk.Fn.ref(
-    //   dependencies.
-    // );
+    const lambdaArn = cdk.Fn.ref(
+      dependencies.function.testFunction.Arn
+    );
+    
+    //Layer Arn
+    const layerArn = cdk.Fn.ref(
+      dependencies.function.crossstackuserapptestLayer.Arn
+    );
 
     //CloudFormation export
     const amplifyProjectInfo = AmplifyHelpers.getProjectInfo();
@@ -62,6 +71,16 @@ export class cdkStack extends cdk.Stack {
       value: apiArn,
       description: 'The ARN of the GraphQL API',
       exportName: `GraphQLAPIArn-${amplifyProjectInfo.projectName}-${amplifyProjectInfo.envName}`
+    });
+    new cdk.CfnOutput(this, 'lambdaArn', {
+      value: lambdaArn,
+      description: 'The ARN of the Lambda testFunction',
+      exportName: `LambdaArn-${amplifyProjectInfo.projectName}-${amplifyProjectInfo.envName}`
+    });
+    new cdk.CfnOutput(this, 'layerArn', {
+      value: layerArn,
+      description: 'The ARN of the Lambda testLayer',
+      exportName: `LayerArn-${amplifyProjectInfo.projectName}-${amplifyProjectInfo.envName}`
     });
 
     /* AWS CDK code goes here - learn more: https://docs.aws.amazon.com/cdk/latest/guide/home.html */

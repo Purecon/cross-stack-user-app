@@ -8,7 +8,9 @@ export type AmplifyDependentResourcesAttributes = {
   },
   "custom": {
     "customExport": {
-      "apiArn": "string"
+      "apiArn": "string",
+      "lambdaArn": "string",
+      "layerArn": "string"
     }
   },
   "function": {

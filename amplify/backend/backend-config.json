@@ -28,6 +28,24 @@
           ],
           "category": "api",
           "resourceName": "crossstackuserapp"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "Region",
+            "LambdaExecutionRole",
+            "LambdaExecutionRoleArn"
+          ],
+          "category": "function",
+          "resourceName": "testFunction"
+        },
+        {
+          "attributes": [
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "crossstackuserapptestLayer"
         }
       ],
       "providerPlugin": "awscloudformation",
