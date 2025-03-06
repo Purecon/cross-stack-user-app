@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-crossstackuserapp-dev-4c07b-authRole",
+      "UnauthRoleArn": "arn:aws:iam::975050288978:role/amplify-crossstackuserapp-dev-4c07b-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::975050288978:role/amplify-crossstackuserapp-dev-4c07b-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-crossstackuserapp-dev-4c07b-deployment",
+      "UnauthRoleName": "amplify-crossstackuserapp-dev-4c07b-unauthRole",
+      "StackName": "amplify-crossstackuserapp-dev-4c07b",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:975050288978:stack/amplify-crossstackuserapp-dev-4c07b/eb816270-fa1f-11ef-91a7-06d4f842f4b7",
+      "AmplifyAppId": "d1ry4f53tqr8ra"
+    }
+  }
+}
