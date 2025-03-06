@@ -17,6 +17,16 @@
       },
       "custom": {
         "customExport": {}
+      },
+      "function": {
+        "testFunction": {
+          "deploymentBucketName": "amplify-crossstackuserapp-dev-4c07b-deployment",
+          "s3Key": "amplify-builds/testFunction-3853747936534c74726f-build.zip"
+        },
+        "crossstackuserapptestLayer": {
+          "deploymentBucketName": "amplify-crossstackuserapp-dev-4c07b-deployment",
+          "s3Key": "amplify-builds/crossstackuserapptestLayer-LambdaLayerVersion23819752-build.zip"
+        }
       }
     }
   }

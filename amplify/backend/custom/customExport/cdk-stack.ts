@@ -24,9 +24,13 @@ export class cdkStack extends cdk.Stack {
       amplifyResourceProps.resourceName,
       [
         {
-        category: "api",
-        resourceName: "crossstackuserapp", 
+          category: "api",
+          resourceName: "crossstackuserapp", 
         },
+        // {
+        //   category: "function",
+        //   resourceName: "testFunction", 
+        // }
       ]
     );
     
@@ -46,6 +50,11 @@ export class cdkStack extends cdk.Stack {
       cdk.Aws.ACCOUNT_ID,
       cdk.Fn.join('/', ['apis', apiId])
     ]);
+
+    //Lambda Arn
+    // const lambdaArn = cdk.Fn.ref(
+    //   dependencies.
+    // );
 
     //CloudFormation export
     const amplifyProjectInfo = AmplifyHelpers.getProjectInfo();

@@ -33,5 +33,52 @@
       "providerPlugin": "awscloudformation",
       "service": "customCDK"
     }
+  },
+  "function": {
+    "crossstackuserapptestLayer": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer"
+    },
+    "testFunction": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_crossstackuserapptestLayer_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "crossstackuserapptestLayer"
+        }
+      ]
+    },
+    "AMPLIFY_function_crossstackuserapptestLayer_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "crossstackuserapptestLayer"
+        }
+      ]
+    },
+    "AMPLIFY_function_testFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "testFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_testFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "testFunction"
+        }
+      ]
+    }
   }
 }
