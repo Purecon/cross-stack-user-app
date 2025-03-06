@@ -5,5 +5,10 @@ export type AmplifyDependentResourcesAttributes = {
       "GraphQLAPIIdOutput": "string",
       "GraphQLAPIKeyOutput": "string"
     }
+  },
+  "custom": {
+    "customExport": {
+      "apiArn": "string"
+    }
   }
 }
